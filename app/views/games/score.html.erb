@@ -1,0 +1,14 @@
+<h1>Games#score</h1>
+
+<%= @phrase %>
+
+<% if @win == 'win' %>
+<p>You won ! <%= @attempt %> is in the grid and your score is <%= @scoring %> !</p>
+<% elsif @win == 'griderror' %>
+<p>You loose, your word is not in the grid</p>
+<% else %>
+<p>You loose, this is not an english word</p>
+<% end %>
+
+<br><br>
+<%= link_to "Jouer à nouveau", new_path %>
